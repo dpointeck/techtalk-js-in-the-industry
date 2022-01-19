@@ -1,0 +1,26 @@
+{
+  "dependencies": {
+    "global": "^4.4.0"
+  },
+  "name": "techtalk-js-in-the-industrie",
+  "description": "Examples for my tech talk about the book JS in the industry",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dpointeck/techtalk-js-in-the-industrie.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dpointeck/techtalk-js-in-the-industrie/issues"
+  },
+  "homepage": "https://github.com/dpointeck/techtalk-js-in-the-industrie#readme",
+  "devDependencies": {
+    "tslib": "^2.3.1"
+  }
+}
