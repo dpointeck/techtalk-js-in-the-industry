@@ -22,10 +22,10 @@ console.log(totalPoints); // 46
 ## be careful with older Array prototype methods
 
 ```js
-const elements = ["RSR1","TSA","COM100","RSR2","TSB","RSR3];
+const elements = ["RSR1","TSA","COM100","RSR2","TSB","RSR3"];
 
 const sortedElements = elements.sort();
-console.log(grades); // ["A", "B", "C", "F", "I"]
+console.log(sortedElements); // ["COM100","RSR1","RSR2","RSR3","TSA","TSB"];
 ```
 
 Weird? Yep, and be also carefull with push, shift, unshift, pop, reverse, splice, sort, and fill
