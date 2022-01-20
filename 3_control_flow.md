@@ -96,3 +96,14 @@ function getTracksection(id, elements) {
 }
 ```
 
+### The feedback from Patrick and Flo according last example
+
+```js
+function getTracksection(id, elements) {
+    return [...elements].filter(element => (
+      element.id === id &&
+      element.type === "tracksection" &&
+      element.state !== "ok"
+    )).first()
+}
+```
