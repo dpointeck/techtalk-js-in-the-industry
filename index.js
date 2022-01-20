@@ -63,6 +63,8 @@ function getResetableTracksection(id, elements) {
     return element;
 }
 
-const resetableTracksection = getResetableTracksection(5,FAdCElements);
+const resetableTracksection = getResetableTracksection(4,FAdCElements);
+
+// do something with resetableTracksection...
 
 return;
