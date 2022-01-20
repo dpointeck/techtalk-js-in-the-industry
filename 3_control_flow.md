@@ -1,10 +1,6 @@
-### guards
+# Clean up control flow
 
-In computer programming, a guard is a boolean expression that must evaluate to
-true if the program execution is to continue in the branch in question. Regardless of
-which programming language is used, guard code or a guard clause is a check of
-integrity preconditions used to avoid errors during execution.
-
+## Dummy data
 ```js
 
 const FAdCElements = [
@@ -45,7 +41,9 @@ const FAdCElements = [
     state: 'ok',
   },
 ];
-
+```
+## First iteration
+```js
 function getResetableTracksection(id, elements) {
     if (id) {
         const element = elements.find(
@@ -67,8 +65,17 @@ function getResetableTracksection(id, elements) {
 }
 ```
 
-```js
+## Try to clean it up a bit
 
+With this example I want to show how you get rid of the nesting by using guards.
+
+### guards
+In computer programming, a guard is a boolean expression that must evaluate to
+true if the program execution is to continue in the branch in question. Regardless of
+which programming language is used, guard code or a guard clause is a check of
+integrity preconditions used to avoid errors during execution.
+
+```js
 function getTracksection(id, elements) {
     if (!id) {
         return;
@@ -95,8 +102,11 @@ function getTracksection(id, elements) {
     return element;
 }
 ```
+I think that's better because we eliminated the nesting and the code became more readable.
 
 ### The feedback from Patrick and Flo according last example
+
+Definitly the shortest version, but I think some parts are a bit trickier to grasp if you have not that mach experience.
 
 ```js
 function getTracksection(id, elements) {
