@@ -25,16 +25,16 @@ console.log(totalPoints); // 46
 const elements = ["RSR1","TSA","COM100","RSR2","TSB","RSR3"];
 
 const sortedElements = elements.sort();
-console.log(sortedElements); // ["COM100","RSR1","RSR2","RSR3","TSA","TSB"];
+console.log(sortedElements); // ["COM100","RSR1","RSR2","RSR3","TSA","TSB"]
 ```
 
 Weird? Yep, and be also carefull with push, shift, unshift, pop, reverse, splice, sort, and fill
 
 ### destructuring for the win
 ```js
-const sortedGrades = [...grades].sort()
+const sortedElements = [...elements].sort()
 
-console.log(grades); // ["C","A","I","B","F"]
-console.log(sortedGrades); // ["A", "B", "C", "F", "I"]
+console.log(grades); // ["COM100","RSR1","RSR2","RSR3","TSA","TSB"]
+console.log(sortedGrades); // ["COM100","RSR1","RSR2","RSR3","TSA","TSB"]
 ```
 
