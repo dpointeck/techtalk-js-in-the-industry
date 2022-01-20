@@ -7,17 +7,60 @@ integrity preconditions used to avoid errors during execution.
 
 ```js
 
-function getTracksection(boardId, elements) {
-    if (boardId) {
+const FAdCElements = [
+  {
+    id: 1,
+    name: 'RSR1',
+    type: 'countinghead',
+    state: 'ok',
+  },
+  {
+    id: 2,
+    name: 'RSR2',
+    type: 'countinghead',
+    state: 'warning',
+  },
+  {
+    id: 3,
+    name: 'RSR3',
+    type: 'countinghead',
+    state: 'ok',
+  },
+  {
+    id: 4,
+    name: 'TS A',
+    type: 'tracksection',
+    state: 'ok',
+  },
+  {
+    id: 5,
+    name: 'TS B',
+    type: 'tracksection',
+    state: 'partial-traversing',
+  },
+  {
+    id: 100,
+    name: 'COM100',
+    type: 'com',
+    state: 'ok',
+  },
+];
+
+function getResetableTracksection(id, elements) {
+    if (id) {
         const element = elements.find(
-            (element) => element.id === boardId
+            (element) => element.id === id
         );
 
         if (element) {
             const isTracksection = element.type === 'tracksection';
 
             if (isTracksection) {
-                return element;
+                const isResetable = element.state !== 'ok';
+
+                if(isResetable) {
+                    return element;
+                }
             }
         }
     }
@@ -26,12 +69,12 @@ function getTracksection(boardId, elements) {
 
 ```js
 
-function getTracksection(boardId, elements) {
-    if (!boardId) {
+function getTracksection(id, elements) {
+    if (!id) {
         return;
     }
 
-    const element = elements.find((element) => element.id === boardId);
+    const element = elements.find((element) => element.id === id);
 
     if (!element) {
         return;
@@ -40,6 +83,12 @@ function getTracksection(boardId, elements) {
     const isTracksection = element.type === 'tracksection';
 
     if (!isTracksection) {
+        return;
+    }
+
+    const isResetable = element.state !== 'ok';
+
+    if(!isResetable){
         return;
     }
 

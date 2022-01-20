@@ -1,20 +1,20 @@
 ## work with array methods
 
 ```js
-const points = [3,9,7,8,6,2,11];
+const resets = [3,9,7,8,6,2,11];
 
-let totalPoints = 0;
+let totalResets = 0;
 
-for (const point of points) {
-    totalPoints += point;
+for (const reset of resets) {
+    totalResets += reset;
 }
 
-console.log(totalPoints); // 46
+console.log(totalResets); // 46
 ```
 
 
 ```js
-const totalPoints = points.reduce((total, point) => total + point);
+const totalResets = resets.reduce((total, reset) => total + reset);
 
 console.log(totalPoints); // 46
 ```
@@ -22,9 +22,9 @@ console.log(totalPoints); // 46
 ## be careful with older Array prototype methods
 
 ```js
-const grades = ["C","A","I","B","F"];
+const elements = ["RSR1","TSA","COM100","RSR2","TSB","RSR3];
 
-const sortedGrades = grades.sort();
+const sortedElements = elements.sort();
 console.log(grades); // ["A", "B", "C", "F", "I"]
 ```
 
